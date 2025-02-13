@@ -1,27 +1,15 @@
 <RCC>
     <qresource prefix="/">
         <file>picture/PM2.5.png</file>
-        <file>picture/暴雪.png</file>
-        <file>picture/暴雨.png</file>
-        <file>picture/冰雹.png</file>
-        <file>picture/大雪.png</file>
-        <file>picture/大雨.png</file>
-        <file>picture/冻雨.png</file>
-        <file>picture/多云转雨（白天）.png</file>
-        <file>picture/风力.png</file>
-        <file>picture/空气湿度.png</file>
-        <file>picture/空气质量.png</file>
-        <file>picture/雷阵雨.png</file>
-        <file>picture/晴.png</file>
-        <file>picture/晴转多云（白天）.png</file>
-        <file>picture/雾.png</file>
-        <file>picture/雾霾.png</file>
-        <file>picture/小雪.png</file>
-        <file>picture/小雨.png</file>
-        <file>picture/阴天.png</file>
-        <file>picture/雨夹雪.png</file>
-        <file>picture/中雪.png</file>
-        <file>picture/中雨.png</file>
-        <file>picture/沙尘暴.png</file>
+        <file>picture/bigrain.png</file>
+        <file>picture/bigsnow.png</file>
+        <file>picture/clear.png</file>
+        <file>picture/cloudy.png</file>
+        <file>picture/haze.png</file>
+        <file>picture/humidity.png</file>
+        <file>picture/overcast.png</file>
+        <file>picture/quality.png</file>
+        <file>picture/sandstorm.png</file>
+        <file>picture/wind.png</file>
     </qresource>
 </RCC>

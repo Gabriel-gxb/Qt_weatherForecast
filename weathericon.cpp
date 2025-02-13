@@ -1,4 +1,4 @@
-#include "weathericon.h"
+﻿#include "weathericon.h"
 
 #include <QLabel>
 
@@ -8,32 +8,32 @@ QString WeatherIcon::mapIcon(QLabel *labelText, QLabel *labelPic)
 {
     QString pix;
     if(labelText->text().contains("雪")){
-        labelPic->setPixmap(QPixmap(":/picture/大雪.png").scaled(40,40));
-        pix = ":/picture/大雪.png";
+        labelPic->setPixmap(QPixmap(":/picture/bigsnow.png").scaled(40,40));
+        pix = ":/picture/bigsnow.png";
     }
     else if(labelText->text().contains("雨")){
-        labelPic->setPixmap(QPixmap(":/picture/大雨.png").scaled(40,40));
-        pix = ":/picture/大雨.png";
+        labelPic->setPixmap(QPixmap(":/picture/bigrain.png").scaled(40,40));
+        pix = ":/picture/大雨.bigrain";
     }
     else if(labelText->text().contains("沙尘暴") || labelText->text() == "浮沉"){
-        labelPic->setPixmap(QPixmap(":/picture/沙尘暴.png").scaled(40,40));
-        pix = ":/picture/沙尘暴.png";
+        labelPic->setPixmap(QPixmap(":/picture/sandstorm.png").scaled(40,40));
+        pix = ":/picture/sandstorm.png";
     }
     else if(labelText->text() == "雾" || labelText->text() == "霾"){
-        labelPic->setPixmap(QPixmap(":/picture/雾霾.png").scaled(40,40));
-        pix = ":/picture/雾霾.png";
+        labelPic->setPixmap(QPixmap(":/picture/haze.png").scaled(40,40));
+        pix = ":/picture/haze.png";
     }
     else if(labelText->text() == "阴"){
-        labelPic->setPixmap(QPixmap(":/picture/阴天.png").scaled(40,40));
-        pix = ":/picture/阴天.png";
+        labelPic->setPixmap(QPixmap(":/picture/overcast.png").scaled(40,40));
+        pix = ":/picture/overcast.png";
     }
     else if(labelText->text() == "晴"){
-        labelPic->setPixmap(QPixmap(":/picture/晴.png").scaled(40,40));
-        pix = ":/picture/晴.png";
+        labelPic->setPixmap(QPixmap(":/picture/clear.png").scaled(40,40));
+        pix = ":/picture/clear.png";
     }
     else{
-        labelPic->setPixmap(QPixmap(":/picture/晴转多云（白天）.png").scaled(40,40));
-        pix = ":/picture/晴转多云（白天）.png";
+        labelPic->setPixmap(QPixmap(":/picture/cloudy.png").scaled(40,40));
+        pix = ":/picture/cloudy.png";
     }
 
     return pix;

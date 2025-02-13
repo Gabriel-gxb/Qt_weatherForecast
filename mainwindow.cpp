@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "airquality.h"
 #include "weathericon.h"
@@ -37,16 +37,16 @@ MainWindow::MainWindow(QWidget *parent)
     //风向、PM2.5、湿度、空气质量
     ui->widget_info->setStyleSheet("background-color: rgb(160, 160, 240)");
 
-    ui->label_windPic->setPixmap(QPixmap(":/picture/风力.png").scaled(60,60));
+    ui->label_windPic->setPixmap(QPixmap(":/picture/wind.png").scaled(60,60));
     ui->label_windPic->setScaledContents(true);
 
     ui->label_PM25Pic->setPixmap(QPixmap(":/picture/PM2.5.png").scaled(60,60));
     ui->label_PM25Pic->setScaledContents(true);
 
-    ui->label_humidityPic->setPixmap(QPixmap(":/picture/空气湿度.png").scaled(60,60));
+    ui->label_humidityPic->setPixmap(QPixmap(":/picture/humidity.png").scaled(60,60));
     ui->label_humidityPic->setScaledContents(true);
 
-    ui->label_qualityPic->setPixmap(QPixmap(":/picture/空气质量.png").scaled(60,60));
+    ui->label_qualityPic->setPixmap(QPixmap(":/picture/quality.png").scaled(60,60));
     ui->label_qualityPic->setScaledContents(true);
 
     //设置为透明
@@ -72,13 +72,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     //连接finished信号处理响应
     connect(reply, &QNetworkReply::finished, this, &MainWindow::onRequestFinished);
-
     //读取citykey.json文件
     QFile jsonFile("./citykey.json");
-    if(jsonFile.open(QIODevice::ReadOnly))
+    if (jsonFile.open(QIODevice::ReadOnly))
         m_cityData = jsonFile.readAll();
     jsonFile.close();
-
 }
 
 MainWindow::~MainWindow()
@@ -132,6 +130,9 @@ void MainWindow::onRequestFinished()
         }
         reply->deleteLater();  //释放reply对象
         reply = nullptr;       //置空指针
+    }
+    else{
+        qDebug() << reply->errorString();
     }
 }
 
@@ -307,7 +308,7 @@ void MainWindow::findCity()
     QJsonDocument jsonDoc = QJsonDocument::fromJson(m_cityData);
     QJsonObject jsonObj = jsonDoc.object();
     QString cityCode = jsonObj[ui->lineEdit->text()].toString().right(9);
-    if(!ui->lineEdit->text().contains("市"))
+    if(!ui->lineEdit->text().contains("市") && cityCode.isEmpty())
         cityCode = jsonObj[ui->lineEdit->text()+"市"].toString().right(9);
 
     //设置URL,发送GET请求

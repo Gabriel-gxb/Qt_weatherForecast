@@ -53,6 +53,7 @@ endif()
 
 target_link_libraries(WeatherForecast PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(WeatherForecast PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

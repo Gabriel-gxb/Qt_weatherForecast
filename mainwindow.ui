@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>700</width>
-    <height>533</height>
+    <height>534</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="res.qrc">
-    <normaloff>:/picture/晴转多云（白天）.png</normaloff>:/picture/晴转多云（白天）.png</iconset>
+    <normaloff>:/picture/cloudy.png</normaloff>:/picture/cloudy.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
