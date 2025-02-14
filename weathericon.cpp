@@ -13,7 +13,7 @@ QString WeatherIcon::mapIcon(QLabel *labelText, QLabel *labelPic)
     }
     else if(labelText->text().contains("雨")){
         labelPic->setPixmap(QPixmap(":/picture/bigrain.png").scaled(40,40));
-        pix = ":/picture/大雨.bigrain";
+        pix = ":/picture/bigrain.png";
     }
     else if(labelText->text().contains("沙尘暴") || labelText->text() == "浮沉"){
         labelPic->setPixmap(QPixmap(":/picture/sandstorm.png").scaled(40,40));
